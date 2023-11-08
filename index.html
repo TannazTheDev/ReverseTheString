@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse The String</title>    
+</head>
+<body>
+    <form action="">
+        <label for="">Enter your string: </label>
+        <input type="text" placeholder="Enter Your String " maxlength="20" name="" id="inputString">
+        <input type="button" onclick="fun()" id="button1"  value="Click Me">
+    </form>
+    <p id="output"></p>
+    <script>
+        let array = [];
+        let output = " ";
+        let Stringg = document.getElementById("inputString");
+        let button1 = document.getElementById("button1");
+        let output1 = document.getElementById("output");
+        function fun(){
+            let string = Stringg.value ;
+            for (let i = 0; i <= string.length; i++) {
+                array[i] = string[string.length - i];
+            }
+            for (let l = 1; l < array.length; l++) {
+                output = output + array[l];
+            }
+            output1.innerHTML = output ;
+            console.log(output);
+        }
+    </script>
+</body>
+</html>
